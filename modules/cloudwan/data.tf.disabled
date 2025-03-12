@@ -1,0 +1,10 @@
+locals {
+  # Determine if base policy is needed
+  create_base_policy = (try(var.core_network.base_policy_document, null) == null) && (try(var.core_network.base_policy_regions, null) == null) ? false : true
+
+  # Global Network creation flag
+  create_global_network = var.global_network_id == null ? true : false
+
+  # Core Network creation flag
+  create_core_network = var.core_network != null ? true : false
+}
