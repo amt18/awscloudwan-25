@@ -1,4 +1,4 @@
-/*
+
 # Deploy Ingress VPC in us-east-1
 module "ingress_east" {
   source = "./modules/vpc-ingress"
@@ -101,4 +101,3 @@ module "cloudwan" {
     }
   }
 }
-*/
